@@ -85,6 +85,8 @@ class ParametricFunctionView: UIView {
             
         }
         
+        
+        
         dataSource = FakeDataSource()
     }
     
