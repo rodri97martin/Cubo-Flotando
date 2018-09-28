@@ -82,6 +82,7 @@ class ParametricFunctionView: UIView {
             func pointsOfInterestFor(_ functionView: ParametricFunctionView) -> [FunctionPoint] {
                 return []
             }
+            
         }
         
         dataSource = FakeDataSource()
