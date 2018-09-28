@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cubo_Flotando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2-Cubo Flotanto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvh-jB-XKL">
+                                <rect key="frame" x="92" y="54" width="230.5" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BC2-S3-VWP" userLabel="Stack Raíz">
+                                <rect key="frame" x="0.0" y="110" width="414" height="786"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j8x-Ct-W9B" userLabel="Stack Superior">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="390.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-gJ-4X7">
+                                                <rect key="frame" x="15" y="0.0" width="384" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SD-v6-kIr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-pY-09n">
+                                                        <rect key="frame" x="51" y="0.0" width="335" height="31"/>
+                                                    </slider>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="jcv-pY-09n" firstAttribute="centerY" secondItem="3SD-v6-kIr" secondAttribute="centerY" id="3XA-MY-odJ"/>
+                                                    <constraint firstItem="jcv-pY-09n" firstAttribute="leading" secondItem="3SD-v6-kIr" secondAttribute="trailing" constant="15" id="NDN-cl-Xla"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-wu-iEb">
+                                                <rect key="frame" x="15" y="30" width="384" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0lS-rw-ttg">
+                                                <rect key="frame" x="0.0" y="50.5" width="414" height="340"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-PO-cIf" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="113.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIf-dD-jUO">
+                                                                <rect key="frame" x="8" y="8" width="42" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="1" green="0.69640557551194071" blue="0.63969585504196225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="pIf-dD-jUO" firstAttribute="leading" secondItem="K3q-PO-cIf" secondAttribute="leading" constant="8" id="S2V-Jk-8qI"/>
+                                                            <constraint firstItem="pIf-dD-jUO" firstAttribute="top" secondItem="K3q-PO-cIf" secondAttribute="top" constant="8" id="g2K-5N-ppd"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posición Z"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="113.5" width="414" height="113"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-QP-YOr">
+                                                                <rect key="frame" x="8" y="8" width="42" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.62154931123369683" green="0.76634183352519103" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="jKE-QP-YOr" firstAttribute="top" secondItem="6Fe-p3-6v0" secondAttribute="top" constant="8" id="9wK-52-khj"/>
+                                                            <constraint firstItem="jKE-QP-YOr" firstAttribute="leading" secondItem="6Fe-p3-6v0" secondAttribute="leading" constant="8" id="OFW-A3-83K"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="226.5" width="414" height="113.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-wW-ahm">
+                                                                <rect key="frame" x="8" y="8" width="42" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.71225618423366166" green="1" blue="0.67375040638657158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="6RV-wW-ahm" firstAttribute="top" secondItem="z8g-Tf-OPa" secondAttribute="top" constant="8" id="EMc-nP-hWa"/>
+                                                            <constraint firstItem="6RV-wW-ahm" firstAttribute="leading" secondItem="z8g-Tf-OPa" secondAttribute="leading" constant="8" id="z3O-Em-5Ko"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Aceleración"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="z8g-Tf-OPa" firstAttribute="width" secondItem="0lS-rw-ttg" secondAttribute="width" id="Ktj-zl-XMC"/>
+                                                    <constraint firstItem="6Fe-p3-6v0" firstAttribute="height" secondItem="K3q-PO-cIf" secondAttribute="height" id="RCT-NB-eCq"/>
+                                                    <constraint firstItem="6Fe-p3-6v0" firstAttribute="width" secondItem="K3q-PO-cIf" secondAttribute="width" id="d4r-YZ-yDl"/>
+                                                    <constraint firstItem="z8g-Tf-OPa" firstAttribute="height" secondItem="K3q-PO-cIf" secondAttribute="height" id="gwv-gt-Sq6"/>
+                                                    <constraint firstItem="z8g-Tf-OPa" firstAttribute="width" secondItem="K3q-PO-cIf" secondAttribute="width" id="xaP-rk-C8d"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="K3q-PO-cIf" secondAttribute="width" id="OHr-ev-H4f"/>
+                                            <constraint firstItem="wGr-gJ-4X7" firstAttribute="leading" secondItem="j8x-Ct-W9B" secondAttribute="leading" constant="15" id="Y2u-xH-7dA"/>
+                                            <constraint firstItem="Dm7-wu-iEb" firstAttribute="leading" secondItem="j8x-Ct-W9B" secondAttribute="leading" constant="15" id="cNd-Zf-aCK"/>
+                                            <constraint firstAttribute="trailing" secondItem="wGr-gJ-4X7" secondAttribute="trailing" constant="15" id="ing-bA-jN9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dm7-wu-iEb" secondAttribute="trailing" constant="15" id="oiT-Oy-XNx"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XkD-sc-M16" userLabel="Stack Inferior">
+                                        <rect key="frame" x="0.0" y="395.5" width="414" height="390.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZXs-jg-Pmy">
+                                                <rect key="frame" x="15" y="0.0" width="384" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uug-BT-Whx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-Pv-eeB">
+                                                        <rect key="frame" x="70.5" y="0.0" width="315.5" height="31"/>
+                                                    </slider>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Uug-BT-Whx" firstAttribute="centerY" secondItem="JKb-Pv-eeB" secondAttribute="centerY" id="5cJ-eq-YAF"/>
+                                                    <constraint firstItem="JKb-Pv-eeB" firstAttribute="leading" secondItem="Uug-BT-Whx" secondAttribute="trailing" constant="15" id="CN3-rF-0us"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xb-7b-9H1">
+                                                <rect key="frame" x="15" y="30" width="384" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-kh-HdG" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50.5" width="414" height="340"/>
+                                                <color key="backgroundColor" red="0.82507274311070822" green="0.71269336633314173" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Posición"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4Xb-7b-9H1" firstAttribute="leading" secondItem="XkD-sc-M16" secondAttribute="leading" constant="15" id="3Bd-gl-cOL"/>
+                                            <constraint firstItem="v4o-kh-HdG" firstAttribute="width" secondItem="XkD-sc-M16" secondAttribute="width" id="878-P6-XhF"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Xb-7b-9H1" secondAttribute="trailing" constant="15" id="MYa-xr-FXI"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZXs-jg-Pmy" secondAttribute="trailing" constant="15" id="YXY-ie-XBa"/>
+                                            <constraint firstItem="ZXs-jg-Pmy" firstAttribute="leading" secondItem="XkD-sc-M16" secondAttribute="leading" constant="15" id="ieS-gO-ii8"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BC2-S3-VWP" firstAttribute="centerX" secondItem="Gvh-jB-XKL" secondAttribute="centerX" id="03W-dd-0vP"/>
+                            <constraint firstAttribute="bottom" secondItem="BC2-S3-VWP" secondAttribute="bottom" id="7eo-F7-cKV"/>
+                            <constraint firstItem="BC2-S3-VWP" firstAttribute="top" secondItem="Gvh-jB-XKL" secondAttribute="bottom" constant="20" id="9xq-v6-LSs"/>
+                            <constraint firstItem="Gvh-jB-XKL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="EEK-Fe-Ufd"/>
+                            <constraint firstItem="BC2-S3-VWP" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="ZqV-Mu-5S4"/>
+                            <constraint firstItem="Gvh-jB-XKL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uc9-c6-EIh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
