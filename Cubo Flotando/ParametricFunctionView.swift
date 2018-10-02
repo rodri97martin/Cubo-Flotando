@@ -84,9 +84,6 @@ class ParametricFunctionView: UIView {
             }
             
         }
-        
-        
-        
         dataSource = FakeDataSource()
     }
     
@@ -96,8 +93,8 @@ class ParametricFunctionView: UIView {
         drawAxis()
         drawTicks()
         drawTexts()
-        //drawTrajectory()
-        //drawPOI()
+        drawTrajectory()
+        drawPOI()
     }
     
     

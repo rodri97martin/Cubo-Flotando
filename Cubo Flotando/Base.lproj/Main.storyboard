@@ -38,8 +38,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-pY-09n">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-pY-09n">
                                                         <rect key="frame" x="51" y="0.0" width="335" height="31"/>
+                                                        <connections>
+                                                            <action selector="updateSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="EDE-dC-iiL"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <constraints>
@@ -47,7 +50,7 @@
                                                     <constraint firstItem="jcv-pY-09n" firstAttribute="leading" secondItem="3SD-v6-kIr" secondAttribute="trailing" constant="15" id="NDN-cl-Xla"/>
                                                 </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-wu-iEb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00 m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-wu-iEb">
                                                 <rect key="frame" x="15" y="30" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -74,6 +77,15 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posición Z"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                                <color key="value" red="0.57116256476683935" green="0.18459925978180161" blue="0.17386714587869759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -94,6 +106,15 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                                <color key="value" red="0.074396768306958933" green="0.058527064344253941" blue="0.67013439119170992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -114,6 +135,15 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Aceleración"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                                <color key="value" red="0.0" green="0.30786512305699487" blue="0.018934051549573064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
@@ -146,8 +176,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-Pv-eeB">
+                                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-Pv-eeB">
                                                         <rect key="frame" x="70.5" y="0.0" width="315.5" height="31"/>
+                                                        <connections>
+                                                            <action selector="updateTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="C4c-y5-GKX"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <constraints>
@@ -155,7 +188,7 @@
                                                     <constraint firstItem="JKb-Pv-eeB" firstAttribute="leading" secondItem="Uug-BT-Whx" secondAttribute="trailing" constant="15" id="CN3-rF-0us"/>
                                                 </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xb-7b-9H1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xb-7b-9H1">
                                                 <rect key="frame" x="15" y="30" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -167,6 +200,15 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Posición"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.89014852887667839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -193,6 +235,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="acelerationFuncView" destination="z8g-Tf-OPa" id="P0G-yD-DX3"/>
+                        <outlet property="func1Label" destination="pIf-dD-jUO" id="SLe-H5-7OE"/>
+                        <outlet property="func2Label" destination="jKE-QP-YOr" id="SRF-Vf-jVE"/>
+                        <outlet property="func3Label" destination="6RV-wW-ahm" id="e0i-Ys-pJg"/>
+                        <outlet property="positionFuncView" destination="K3q-PO-cIf" id="0NG-Bl-mDW"/>
+                        <outlet property="sizeLabel" destination="Dm7-wu-iEb" id="x3F-mB-qV3"/>
+                        <outlet property="sizeSlider" destination="jcv-pY-09n" id="oSl-88-SfU"/>
+                        <outlet property="speedFuncView" destination="6Fe-p3-6v0" id="Waj-j5-ZiH"/>
+                        <outlet property="speedPositionFuncView" destination="v4o-kh-HdG" id="HPE-hs-xAu"/>
+                        <outlet property="timeLabel" destination="4Xb-7b-9H1" id="5ZC-kT-92w"/>
+                        <outlet property="timeSlider" destination="JKb-Pv-eeB" id="uO6-3s-yOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
