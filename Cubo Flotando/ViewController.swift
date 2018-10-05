@@ -109,28 +109,21 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     
     func functionView(_ functionView: ParametricFunctionView, pointAt index: Double) -> FunctionPoint {
         
+        setScale(functionView)
         let t = index
         switch functionView {
         case positionFuncView:
             let z = model.cubePosition(time: t, size: size)
-            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
-            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
             return FunctionPoint(x: t, y: z)
         case speedFuncView:
             let v = model.cubeSpeed(time: t, size: size)
-            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
-            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
             return FunctionPoint(x: t, y: v)
         case acelerationFuncView:
             let a = model.cubeAceleration(time: t, size: size)
-            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
-            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
             return FunctionPoint(x: t, y: a)
         case speedPositionFuncView:
             let z = model.cubePosition(time: t, size: size)
             let v = model.cubeSpeed(time: t, size: size)
-            functionView.scaleX = Double((functionView.bounds.size.width * 8) / 414)
-            functionView.scaleY = Double((functionView.bounds.size.height * 8) / 337.5)
             return FunctionPoint(x: z, y: v)
         default:
             return FunctionPoint(x: 0, y: 0)
@@ -156,6 +149,16 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
             return [FunctionPoint(x: z, y: v)]
         default:
             return [FunctionPoint(x: 0, y: 0)]
+        }
+    }
+    
+    func setScale(_ functionView: ParametricFunctionView){
+        if functionView == speedPositionFuncView {
+            functionView.scaleX = Double((functionView.bounds.size.width * 8) / 414)
+            functionView.scaleY = Double((functionView.bounds.size.height * 8) / 337.5)
+        } else {
+            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
+            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
         }
     }
 }
