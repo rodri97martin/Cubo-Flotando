@@ -220,7 +220,7 @@ class ParametricFunctionView: UIView {
             
             let path = UIBezierPath(ovalIn: CGRect(x: px-4, y: py-4, width: 8, height: 8))
             
-            UIColor.red.set()
+            trajectoryColor.set()
             
             path.stroke()
             path.fill()

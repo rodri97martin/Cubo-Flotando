@@ -98,6 +98,8 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         
     }
     
+    
+    
     func startIndexFor(_ functionView: ParametricFunctionView) -> Double {
         return 0
     }

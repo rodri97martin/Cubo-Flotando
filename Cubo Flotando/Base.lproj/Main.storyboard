@@ -89,6 +89,9 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="resolution">
                                                                 <real key="value" value="100"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="poiColor">
+                                                                <color key="value" red="0.57116256480000005" green="0.1845992598" blue="0.17386714589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -121,6 +124,9 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="resolution">
                                                                 <real key="value" value="100"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="poiColor">
+                                                                <color key="value" red="0.07439676831" green="0.058527064339999997" blue="0.67013439119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -152,6 +158,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="resolution">
                                                                 <real key="value" value="100"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="poiColor">
+                                                                <color key="value" red="0.0" green="0.30786512310000003" blue="0.018934051550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -220,6 +229,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="resolution">
                                                         <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="poiColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.89014852889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
