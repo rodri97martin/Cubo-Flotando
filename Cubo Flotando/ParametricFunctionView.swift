@@ -88,6 +88,7 @@ class ParametricFunctionView: UIView {
     }
     
     
+    
     override func draw(_ rect: CGRect) {
         
         drawAxis()

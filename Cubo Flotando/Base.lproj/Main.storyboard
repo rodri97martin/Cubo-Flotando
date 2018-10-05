@@ -38,7 +38,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-pY-09n">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="13" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-pY-09n">
                                                         <rect key="frame" x="51" y="0.0" width="335" height="31"/>
                                                         <connections>
                                                             <action selector="updateSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="EDE-dC-iiL"/>
@@ -59,7 +59,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0lS-rw-ttg">
                                                 <rect key="frame" x="0.0" y="50.5" width="414" height="340"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-PO-cIf" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-PO-cIf" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="113.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIf-dD-jUO">
@@ -78,7 +78,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posición Z"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
                                                                 <real key="value" value="2"/>
@@ -86,9 +86,12 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
                                                                 <color key="value" red="0.57116256476683935" green="0.18459925978180161" blue="0.17386714587869759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="resolution">
+                                                                <real key="value" value="100"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="113.5" width="414" height="113"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-QP-YOr">
@@ -107,7 +110,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
                                                                 <real key="value" value="2"/>
@@ -115,9 +118,12 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
                                                                 <color key="value" red="0.074396768306958933" green="0.058527064344253941" blue="0.67013439119170992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="resolution">
+                                                                <real key="value" value="100"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="226.5" width="414" height="113.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-wW-ahm">
@@ -136,13 +142,16 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Aceleración"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
                                                                 <color key="value" red="0.0" green="0.30786512305699487" blue="0.018934051549573064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="resolution">
+                                                                <real key="value" value="100"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -176,7 +185,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-Pv-eeB">
+                                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-Pv-eeB">
                                                         <rect key="frame" x="70.5" y="0.0" width="315.5" height="31"/>
                                                         <connections>
                                                             <action selector="updateTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="C4c-y5-GKX"/>
@@ -194,20 +203,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-kh-HdG" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-kh-HdG" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50.5" width="414" height="340"/>
                                                 <color key="backgroundColor" red="0.82507274311070822" green="0.71269336633314173" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Posición"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                        <real key="value" value="5"/>
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
-                                                        <real key="value" value="5"/>
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
                                                         <color key="value" red="1" green="0.0" blue="0.89014852887667839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="resolution">
+                                                        <real key="value" value="100"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>

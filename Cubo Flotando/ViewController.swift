@@ -75,12 +75,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         let a = model.cubeAceleration(time: time, size: size)
         let label3 = round(100*a)/100
         func3Label.text = String(label3) + " m/s^2"
-        
-        positionFuncView.setNeedsDisplay()
-        speedFuncView.setNeedsDisplay()
-        acelerationFuncView.setNeedsDisplay()
-        speedPositionFuncView.setNeedsDisplay()
-        
+    
     }
     
     @IBAction func updateSize(_ sender: UISlider) {
@@ -101,10 +96,6 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         let label3 = round(100*a)/100
         func3Label.text = String(label3) + " m/s^2"
         
-        positionFuncView.setNeedsDisplay()
-        speedFuncView.setNeedsDisplay()
-        acelerationFuncView.setNeedsDisplay()
-        speedPositionFuncView.setNeedsDisplay()
     }
     
     func startIndexFor(_ functionView: ParametricFunctionView) -> Double {
@@ -112,6 +103,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     }
     
     func endIndexFor(_ functionView: ParametricFunctionView) -> Double {
+        print(functionView.bounds.size.height)
         return 10
     }
     
@@ -121,16 +113,24 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         switch functionView {
         case positionFuncView:
             let z = model.cubePosition(time: t, size: size)
+            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
+            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
             return FunctionPoint(x: t, y: z)
         case speedFuncView:
             let v = model.cubeSpeed(time: t, size: size)
+            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
+            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
             return FunctionPoint(x: t, y: v)
         case acelerationFuncView:
             let a = model.cubeAceleration(time: t, size: size)
+            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
+            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
             return FunctionPoint(x: t, y: a)
         case speedPositionFuncView:
             let z = model.cubePosition(time: t, size: size)
             let v = model.cubeSpeed(time: t, size: size)
+            functionView.scaleX = Double((functionView.bounds.size.width * 8) / 414)
+            functionView.scaleY = Double((functionView.bounds.size.height * 8) / 337.5)
             return FunctionPoint(x: z, y: v)
         default:
             return FunctionPoint(x: 0, y: 0)
