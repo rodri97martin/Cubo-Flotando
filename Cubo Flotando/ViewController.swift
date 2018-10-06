@@ -27,6 +27,8 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     @IBOutlet weak var func3Label: UILabel!
     
     
+    let colors = [UIColor.red, UIColor.green, UIColor.blue, UIColor.orange, UIColor.yellow, UIColor.gray, UIColor.white, UIColor.brown]
+    
     var time: Double = 0.0 {
         didSet {
             positionFuncView.setNeedsDisplay()
@@ -52,7 +54,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         speedFuncView.dataSource = self
         acelerationFuncView.dataSource = self
         speedPositionFuncView.dataSource = self
-        
+
         timeSlider.sendActions(for: .valueChanged)
         sizeSlider.sendActions(for: .valueChanged)
     }
@@ -98,6 +100,37 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         
     }
     
+    @IBAction func setDefaultValues(_ sender: UILongPressGestureRecognizer) {
+        timeSlider.value = 5
+        sizeSlider.value = 13
+        updateSize(sizeSlider)
+        updateTime(timeSlider)
+    }
+    
+    @IBAction func changeColor(_ sender: UITapGestureRecognizer) {
+        
+        let viewTapped = sender.view
+        switch viewTapped {
+        case positionFuncView:
+            let newColor = (positionFuncView.counter + 1) % colors.count
+            positionFuncView.counter += 1
+            positionFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
+        case speedFuncView:
+            let newColor = (speedFuncView.counter + 1) % colors.count
+            speedFuncView.counter += 1
+            speedFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
+        case acelerationFuncView:
+            let newColor = (acelerationFuncView.counter + 1) % colors.count
+            acelerationFuncView.counter += 1
+            acelerationFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
+        case speedPositionFuncView:
+            let newColor = (speedPositionFuncView.counter + 1) % colors.count
+            speedPositionFuncView.counter += 1
+            speedPositionFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
+        default:
+            return
+        }
+    }
     
     
     func startIndexFor(_ functionView: ParametricFunctionView) -> Double {
@@ -105,7 +138,6 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     }
     
     func endIndexFor(_ functionView: ParametricFunctionView) -> Double {
-        print(functionView.bounds.size.height)
         return 10
     }
     

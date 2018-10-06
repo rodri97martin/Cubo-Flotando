@@ -37,6 +37,9 @@ class ParametricFunctionView: UIView {
     @IBInspectable
     var textY: String = "y"
     
+    @IBInspectable
+    var counter: Int = 0
+    
     // Numero de puntos en el eje X por unidad representada
     @IBInspectable
     var scaleX: Double = 1.0 {
