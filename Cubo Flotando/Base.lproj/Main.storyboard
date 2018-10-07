@@ -59,7 +59,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0lS-rw-ttg">
                                                 <rect key="frame" x="0.0" y="50.5" width="414" height="340"/>
                                                 <subviews>
-                                                    <view tag="4" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-PO-cIf" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-PO-cIf" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="113.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIf-dD-jUO">
@@ -70,6 +70,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.2269409174" blue="0.18215404569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstItem="pIf-dD-jUO" firstAttribute="leading" secondItem="K3q-PO-cIf" secondAttribute="leading" constant="8" id="S2V-Jk-8qI"/>
                                                             <constraint firstItem="pIf-dD-jUO" firstAttribute="top" secondItem="K3q-PO-cIf" secondAttribute="top" constant="8" id="g2K-5N-ppd"/>
@@ -97,10 +98,10 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="myG-BK-VEB" appends="YES" id="cuW-TL-8oa"/>
+                                                            <outletCollection property="gestureRecognizers" destination="tSL-5f-eTi" appends="YES" id="PxK-8B-uKf"/>
                                                         </connections>
                                                     </view>
-                                                    <view tag="5" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view tag="1" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="113.5" width="414" height="113"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-QP-YOr">
@@ -111,6 +112,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstItem="jKE-QP-YOr" firstAttribute="top" secondItem="6Fe-p3-6v0" secondAttribute="top" constant="8" id="9wK-52-khj"/>
                                                             <constraint firstItem="jKE-QP-YOr" firstAttribute="leading" secondItem="6Fe-p3-6v0" secondAttribute="leading" constant="8" id="OFW-A3-83K"/>
@@ -138,10 +140,10 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="myG-BK-VEB" appends="YES" id="Hbn-B5-tHg"/>
+                                                            <outletCollection property="gestureRecognizers" destination="OxE-01-WB7" appends="YES" id="mVH-2u-tp1"/>
                                                         </connections>
                                                     </view>
-                                                    <view tag="6" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view tag="2" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="226.5" width="414" height="113.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-wW-ahm">
@@ -152,6 +154,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.67149833920000002" green="1" blue="0.49363162430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstItem="6RV-wW-ahm" firstAttribute="top" secondItem="z8g-Tf-OPa" secondAttribute="top" constant="8" id="EMc-nP-hWa"/>
                                                             <constraint firstItem="6RV-wW-ahm" firstAttribute="leading" secondItem="z8g-Tf-OPa" secondAttribute="leading" constant="8" id="z3O-Em-5Ko"/>
@@ -179,7 +182,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="myG-BK-VEB" appends="YES" id="DEN-FE-Vra"/>
+                                                            <outletCollection property="gestureRecognizers" destination="I7h-3v-w5n" appends="YES" id="lCK-XW-pNb"/>
                                                         </connections>
                                                     </view>
                                                 </subviews>
@@ -230,9 +233,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view tag="7" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-kh-HdG" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                            <view tag="3" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-kh-HdG" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50.5" width="414" height="340"/>
                                                 <color key="backgroundColor" red="1" green="0.99321420549999995" blue="0.21521018119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Posición"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
@@ -256,7 +260,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="myG-BK-VEB" appends="YES" id="DIe-Dw-uSs"/>
+                                                    <outletCollection property="gestureRecognizers" destination="gIn-hv-iUs" appends="YES" id="Psl-XF-FrK"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -306,9 +310,24 @@
                         <action selector="setDefaultValues:" destination="BYZ-38-t0r" id="FoB-vX-AVp"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <tapGestureRecognizer id="myG-BK-VEB">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="tSL-5f-eTi">
                     <connections>
-                        <action selector="changeColor:" destination="BYZ-38-t0r" id="hWQ-fh-7wk"/>
+                        <action selector="changeColorForPTFunc:" destination="BYZ-38-t0r" id="W71-gl-lqR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="OxE-01-WB7">
+                    <connections>
+                        <action selector="changeColorForSTFunc:" destination="BYZ-38-t0r" id="zdA-Wi-5F5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="I7h-3v-w5n">
+                    <connections>
+                        <action selector="changeColorForATFunc:" destination="BYZ-38-t0r" id="gC4-xD-F6O"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="gIn-hv-iUs">
+                    <connections>
+                        <action selector="changeColorForSPFunc:" destination="BYZ-38-t0r" id="9Mq-eU-O0W"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

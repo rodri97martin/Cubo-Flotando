@@ -2,11 +2,19 @@
 //  ViewController.swift
 //  Cubo Flotando
 //
-//  Created by Rodrigo Martín Martín on 25/09/2018.
+//  Created by Rodrigo "Steve Jobs" Martín Martín on 25/09/2018.
 //  Copyright © 2018 Rodri. All rights reserved.
 //
 
 import UIKit
+
+struct Constants {
+    static let POSITION_FUNC = 0
+    static let SPEED_FUNC = 1
+    static let ACCELERATION_FUNC = 2
+    static let SPEED_POSITION_FUNC = 3
+    
+}
 
 class ViewController: UIViewController, ParametricFunctionViewDataSource {
     
@@ -107,28 +115,54 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         updateTime(timeSlider)
     }
     
-    @IBAction func changeColor(_ sender: UITapGestureRecognizer) {
-        
-        let viewTapped = sender.view
-        switch viewTapped {
-        case positionFuncView:
+    
+   
+    @IBAction func changeColorForPTFunc(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended{
+            changeColor((sender.view?.tag)!)
+        }
+    }
+    @IBAction func changeColorForSTFunc(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended{
+            changeColor((sender.view?.tag)!)
+        }
+    }
+    @IBAction func changeColorForSPFunc(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended{
+            changeColor((sender.view?.tag)!)
+        }
+    }
+    @IBAction func changeColorForATFunc(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended{
+            changeColor((sender.view?.tag)!)
+        }
+    }
+    func changeColor(_ functionViewTag: Int) {
+        print(functionViewTag)
+        switch functionViewTag {
+        case Constants.POSITION_FUNC:
+            print("changing PT")
             let newColor = (positionFuncView.counter + 1) % colors.count
             positionFuncView.counter += 1
             positionFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-        case speedFuncView:
+        case Constants.SPEED_FUNC:
+            print("changing ST")
             let newColor = (speedFuncView.counter + 1) % colors.count
             speedFuncView.counter += 1
             speedFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-        case acelerationFuncView:
+        case Constants.ACCELERATION_FUNC:
+            print("changing AT")
             let newColor = (acelerationFuncView.counter + 1) % colors.count
             acelerationFuncView.counter += 1
             acelerationFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-        case speedPositionFuncView:
+        case Constants.SPEED_POSITION_FUNC:
+            print("changing SP")
             let newColor = (speedPositionFuncView.counter + 1) % colors.count
             speedPositionFuncView.counter += 1
             speedPositionFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
+            speedPositionFuncView.setNeedsDisplay()
         default:
-            return
+            print("changing NONE")
         }
     }
     
