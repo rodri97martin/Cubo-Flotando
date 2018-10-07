@@ -8,14 +8,6 @@
 
 import UIKit
 
-struct Constants {
-    static let POSITION_FUNC = 0
-    static let SPEED_FUNC = 1
-    static let ACCELERATION_FUNC = 2
-    static let SPEED_POSITION_FUNC = 3
-    
-}
-
 class ViewController: UIViewController, ParametricFunctionViewDataSource {
     
     let model = CubeModel()
@@ -35,7 +27,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     @IBOutlet weak var func3Label: UILabel!
     
     
-    let colors = [UIColor.red, UIColor.green, UIColor.blue, UIColor.orange, UIColor.yellow, UIColor.gray, UIColor.white, UIColor.brown]
+    let colors = [UIColor.red, UIColor.green, UIColor.blue, UIColor.orange, UIColor.yellow, UIColor.gray, UIColor.brown, UIColor.cyan, UIColor.darkGray, UIColor.lightGray, UIColor.magenta, UIColor.purple]
     
     var time: Double = 0.0 {
         didSet {
@@ -62,6 +54,8 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         speedFuncView.dataSource = self
         acelerationFuncView.dataSource = self
         speedPositionFuncView.dataSource = self
+        
+        defaultColors()
 
         timeSlider.sendActions(for: .valueChanged)
         sizeSlider.sendActions(for: .valueChanged)
@@ -113,59 +107,40 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         sizeSlider.value = 13
         updateSize(sizeSlider)
         updateTime(timeSlider)
+        defaultColors()
     }
     
-    
-   
-    @IBAction func changeColorForPTFunc(_ sender: UITapGestureRecognizer) {
-        if sender.state == .ended{
-            changeColor((sender.view?.tag)!)
-        }
-    }
-    @IBAction func changeColorForSTFunc(_ sender: UITapGestureRecognizer) {
-        if sender.state == .ended{
-            changeColor((sender.view?.tag)!)
-        }
-    }
-    @IBAction func changeColorForSPFunc(_ sender: UITapGestureRecognizer) {
-        if sender.state == .ended{
-            changeColor((sender.view?.tag)!)
-        }
-    }
-    @IBAction func changeColorForATFunc(_ sender: UITapGestureRecognizer) {
-        if sender.state == .ended{
-            changeColor((sender.view?.tag)!)
-        }
-    }
-    func changeColor(_ functionViewTag: Int) {
-        print(functionViewTag)
-        switch functionViewTag {
-        case Constants.POSITION_FUNC:
-            print("changing PT")
-            let newColor = (positionFuncView.counter + 1) % colors.count
-            positionFuncView.counter += 1
-            positionFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-        case Constants.SPEED_FUNC:
-            print("changing ST")
-            let newColor = (speedFuncView.counter + 1) % colors.count
-            speedFuncView.counter += 1
-            speedFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-        case Constants.ACCELERATION_FUNC:
-            print("changing AT")
-            let newColor = (acelerationFuncView.counter + 1) % colors.count
-            acelerationFuncView.counter += 1
-            acelerationFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-        case Constants.SPEED_POSITION_FUNC:
-            print("changing SP")
-            let newColor = (speedPositionFuncView.counter + 1) % colors.count
-            speedPositionFuncView.counter += 1
-            speedPositionFuncView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
-            speedPositionFuncView.setNeedsDisplay()
-        default:
-            print("changing NONE")
-        }
+    @IBAction func nextColorForPTFunc(_ sender: UISwipeGestureRecognizer) {
+        nextColor(positionFuncView)
     }
     
+    @IBAction func nextColorForSTFunc(_ sender: UISwipeGestureRecognizer) {
+        nextColor(speedFuncView)
+    }
+    
+    @IBAction func nextColorForATFunc(_ sender: UISwipeGestureRecognizer) {
+        nextColor(acelerationFuncView)
+    }
+    
+    @IBAction func nextColorForSPFunc(_ sender: UISwipeGestureRecognizer) {
+        nextColor(speedPositionFuncView)
+    }
+    
+    @IBAction func previousColorForPTFunc(_ sender: UISwipeGestureRecognizer) {
+        previousColor(positionFuncView)
+    }
+    
+    @IBAction func previousColorForSTFunc(_ sender: UISwipeGestureRecognizer) {
+        previousColor(speedFuncView)
+    }
+    
+    @IBAction func previousColorForATFunc(_ sender: UISwipeGestureRecognizer) {
+        previousColor(acelerationFuncView)
+    }
+    
+    @IBAction func previousColorForSPFunc(_ sender: UISwipeGestureRecognizer) {
+        previousColor(speedPositionFuncView)
+    }
     
     func startIndexFor(_ functionView: ParametricFunctionView) -> Double {
         return 0
@@ -228,6 +203,25 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
             functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
             functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
         }
+    }
+    
+    func defaultColors() {
+        positionFuncView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        speedFuncView.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+        acelerationFuncView.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        speedPositionFuncView.backgroundColor = UIColor.yellow.withAlphaComponent(0.5)
+    }
+    
+    func nextColor(_ functionView :ParametricFunctionView) {
+        let newColor = (functionView.counter + 1) % colors.count
+        functionView.counter += 1
+        functionView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
+    }
+    
+    func previousColor(_ functionView :ParametricFunctionView) {
+        let newColor = (functionView.counter + colors.count - 1) % colors.count
+        functionView.counter += (colors.count - 1)
+        functionView.backgroundColor = colors[newColor].withAlphaComponent(0.5)
     }
 }
 

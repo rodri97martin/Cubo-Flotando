@@ -69,7 +69,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.2269409174" blue="0.18215404569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="1" green="0.17827684825445245" blue="0.2823906262277861" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstItem="pIf-dD-jUO" firstAttribute="leading" secondItem="K3q-PO-cIf" secondAttribute="leading" constant="8" id="S2V-Jk-8qI"/>
@@ -98,7 +98,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="tSL-5f-eTi" appends="YES" id="PxK-8B-uKf"/>
+                                                            <outletCollection property="gestureRecognizers" destination="uLB-zS-Ary" appends="YES" id="2bG-TO-fN6"/>
+                                                            <outletCollection property="gestureRecognizers" destination="FRL-mY-xdp" appends="YES" id="jhM-61-tIg"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="1" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-p3-6v0" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -140,7 +141,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="OxE-01-WB7" appends="YES" id="mVH-2u-tp1"/>
+                                                            <outletCollection property="gestureRecognizers" destination="4tb-EH-LaJ" appends="YES" id="cD4-K8-tUT"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Js5-NE-Q6S" appends="YES" id="KVf-Jf-dT2"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="2" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-Tf-OPa" customClass="ParametricFunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -182,7 +184,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="I7h-3v-w5n" appends="YES" id="lCK-XW-pNb"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Ubb-Sb-k6j" appends="YES" id="4pk-hh-Ufo"/>
+                                                            <outletCollection property="gestureRecognizers" destination="R29-uP-RXA" appends="YES" id="geh-HB-k6W"/>
                                                         </connections>
                                                     </view>
                                                 </subviews>
@@ -260,7 +263,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="gIn-hv-iUs" appends="YES" id="Psl-XF-FrK"/>
+                                                    <outletCollection property="gestureRecognizers" destination="zy8-Zt-ynP" appends="YES" id="uK6-d9-z68"/>
+                                                    <outletCollection property="gestureRecognizers" destination="596-ZM-Le4" appends="YES" id="n0T-pv-Zil"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -310,26 +314,46 @@
                         <action selector="setDefaultValues:" destination="BYZ-38-t0r" id="FoB-vX-AVp"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="tSL-5f-eTi">
+                <swipeGestureRecognizer direction="right" id="uLB-zS-Ary">
                     <connections>
-                        <action selector="changeColorForPTFunc:" destination="BYZ-38-t0r" id="W71-gl-lqR"/>
+                        <action selector="previousColorForPTFunc:" destination="BYZ-38-t0r" id="nkz-F5-8PF"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="OxE-01-WB7">
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4tb-EH-LaJ">
                     <connections>
-                        <action selector="changeColorForSTFunc:" destination="BYZ-38-t0r" id="zdA-Wi-5F5"/>
+                        <action selector="previousColorForSTFunc:" destination="BYZ-38-t0r" id="bkn-0m-fYE"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="I7h-3v-w5n">
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Ubb-Sb-k6j">
                     <connections>
-                        <action selector="changeColorForATFunc:" destination="BYZ-38-t0r" id="gC4-xD-F6O"/>
+                        <action selector="previousColorForATFunc:" destination="BYZ-38-t0r" id="JI5-zc-nTo"/>
                     </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="gIn-hv-iUs">
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="zy8-Zt-ynP">
                     <connections>
-                        <action selector="changeColorForSPFunc:" destination="BYZ-38-t0r" id="9Mq-eU-O0W"/>
+                        <action selector="previousColorForSPFunc:" destination="BYZ-38-t0r" id="OIt-Hb-oef"/>
                     </connections>
-                </tapGestureRecognizer>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="FRL-mY-xdp">
+                    <connections>
+                        <action selector="nextColorForPTFunc:" destination="BYZ-38-t0r" id="Muj-v8-Ysp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Js5-NE-Q6S">
+                    <connections>
+                        <action selector="nextColorForSTFunc:" destination="BYZ-38-t0r" id="Z0T-BY-EpV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="R29-uP-RXA">
+                    <connections>
+                        <action selector="nextColorForATFunc:" destination="BYZ-38-t0r" id="E0M-1G-ue1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="596-ZM-Le4">
+                    <connections>
+                        <action selector="nextColorForSPFunc:" destination="BYZ-38-t0r" id="afg-EG-Txw"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
         </scene>
