@@ -25,6 +25,8 @@ protocol ParametricFunctionViewDataSource: class {
 @IBDesignable
 class ParametricFunctionView: UIView {
     
+    let TICK_LENGTH : CGFloat = 3
+    
     @IBInspectable
     var lineWidth : Double = 3.0
     
@@ -123,40 +125,31 @@ class ParametricFunctionView: UIView {
         path2.stroke()
     }
     
-    private func drawTicks() {
+    private func drawTicks(){
         
-        let numberOfTicks = 8.0
+        let width = bounds.size.width
+        let height = bounds.size.height
         
-        UIColor.blue.set()
+        let xInterval = width/11
+        let yInterval = height/11
         
-        let ptsYByTick = Double(bounds.size.height) / numberOfTicks
-        let unitsYByTick = (ptsYByTick / scaleY).roundedOneDigit
-        for y in stride(from: -numberOfTicks * unitsYByTick, to: numberOfTicks*unitsYByTick, by: unitsYByTick) {
-            let px = pointForX(0)
-            let py = pointForY(y)
-            
+        for i in stride(from: xInterval/2, to: width, by: xInterval){
             let path = UIBezierPath()
-            path.move(to: CGPoint(x: px-2, y: py))
-            path.addLine(to: CGPoint(x: px+2, y: py))
-            
+            path.move(to: CGPoint(x: i, y: height/2 - TICK_LENGTH))
+            path.addLine(to: CGPoint(x: i, y: height/2 + TICK_LENGTH))
+            path.lineWidth = 1
             path.stroke()
         }
         
-        let ptsXByTick = Double(bounds.size.width) / numberOfTicks
-        let unitsXByTick = (ptsXByTick / scaleX).roundedOneDigit
-        for x in stride(from: -numberOfTicks * unitsXByTick, to: numberOfTicks*unitsXByTick, by: unitsXByTick) {
-            let px = pointForX(x)
-            let py = pointForY(0)
-            
+        for i in stride(from: yInterval/2, to: width, by: yInterval){
             let path = UIBezierPath()
-            path.move(to: CGPoint(x: px, y: py-2))
-            path.addLine(to: CGPoint(x: px, y: py+2))
-            
+            path.move(to: CGPoint(x: width/2 - TICK_LENGTH, y: i))
+            path.addLine(to: CGPoint(x: width/2 + TICK_LENGTH, y: i))
+            path.lineWidth = 1
             path.stroke()
         }
+        
     }
-    
-    
     
     private func drawTexts() {
         

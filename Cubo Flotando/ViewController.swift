@@ -54,12 +54,12 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         speedFuncView.dataSource = self
         acelerationFuncView.dataSource = self
         speedPositionFuncView.dataSource = self
-        
+        /*
         setScale(positionFuncView)
         setScale(speedFuncView)
         setScale(acelerationFuncView)
         setScale(speedPositionFuncView)
-        
+        */
         defaultColors()
 
         timeSlider.sendActions(for: .valueChanged)
