@@ -55,6 +55,11 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         acelerationFuncView.dataSource = self
         speedPositionFuncView.dataSource = self
         
+        setScale(positionFuncView)
+        setScale(speedFuncView)
+        setScale(acelerationFuncView)
+        setScale(speedPositionFuncView)
+        
         defaultColors()
 
         timeSlider.sendActions(for: .valueChanged)
@@ -153,7 +158,6 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     
     func functionView(_ functionView: ParametricFunctionView, pointAt index: Double) -> FunctionPoint {
         
-        setScale(functionView)
         let t = index
         switch functionView {
         case positionFuncView:
