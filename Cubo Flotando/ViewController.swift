@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Cubo Flotando
 //
-//  Created by Rodrigo "Steve Jobs" Martín Martín on 25/09/2018.
+//  Created by Rodrigo Martín Martín on 25/09/2018.
 //  Copyright © 2018 Rodri. All rights reserved.
 //
 
@@ -103,6 +103,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     }
     
     @IBAction func setDefaultValues(_ sender: UILongPressGestureRecognizer) {
+        
         timeSlider.value = 5
         sizeSlider.value = 13
         updateSize(sizeSlider)
@@ -196,6 +197,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
     }
     
     func setScale(_ functionView: ParametricFunctionView){
+        
         if functionView == speedPositionFuncView {
             functionView.scaleX = Double((functionView.bounds.size.width * 8) / 414)
             functionView.scaleY = Double((functionView.bounds.size.height * 8) / 337.5)

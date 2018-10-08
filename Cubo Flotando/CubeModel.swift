@@ -2,7 +2,7 @@
 //  CubeModel.swift
 //  Cubo Flotando
 //
-//  Created by Rodrigo Martín Martín on 28/09/2018.
+//  Created by Rodrigo Martín Martín on 25/09/2018.
 //  Copyright © 2018 Rodri. All rights reserved.
 //
 
